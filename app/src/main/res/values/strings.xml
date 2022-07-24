@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Stripe Subscription</string>
+
+    <!-- Checkout activity -->
+    <string name="title_activity_checkout">CheckoutActivity</string>
+    <string name="checkout_item_description">Description</string>
+    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is
+        not available on this phone.
+    </string>
+    <string name="payments_show_name" translatable="false">Successfully received payment data for
+        %s!
+    </string>
+    <string name="pay">Pay</string>
+    <string name="card_only_payment">Card Only Payment</string>
+    <string name="prebuilt_ui">Prebuilt Ui</string>
+    <string name="custom_card">Custom Card Layout</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_holder">Card Holder Name</string>
+    <string name="expire">Expire Data(MM/YY)</string>
+</resources>
