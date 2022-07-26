@@ -33,7 +33,7 @@ class PreBuiltActivity : AppCompatActivity() {
     }
     fun showPaymentSheet(){
         ClientSecretProvider().getClientSecret {
-            paymentSheet.presentWithPaymentIntent(
+            paymentSheet.presentWithSetupIntent(
                 it,
                 PaymentSheet.Configuration(
                     merchantDisplayName = "Ajay Asija",

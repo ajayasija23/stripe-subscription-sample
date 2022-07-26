@@ -8,6 +8,7 @@ import com.asija.stripe_subscription.utils.ClientSecretProvider
 import com.asija.stripe_subscription.utils.toast
 import com.stripe.android.PaymentConfiguration
 import com.stripe.android.model.ConfirmPaymentIntentParams
+import com.stripe.android.model.ConfirmSetupIntentParams
 import com.stripe.android.model.PaymentMethodCreateParams
 import com.stripe.android.payments.paymentlauncher.PaymentLauncher
 import com.stripe.android.payments.paymentlauncher.PaymentResult
@@ -40,11 +41,25 @@ class CustomCardActivity :AppCompatActivity() {
                     cvc = binding.etCvv.text.toString()
                 )
                 val paymentMethodCreateParams=PaymentMethodCreateParams.create(card)
-                val confirmParams = ConfirmPaymentIntentParams
-                    .createWithPaymentMethodCreateParams(paymentMethodCreateParams, it)
-                lifecycleScope.launch {
-                    paymentLauncher.confirm(confirmParams)
+                if (it.startsWith("seti")){
+                    val confirmParam= ConfirmSetupIntentParams.create(
+                            paymentMethodCreateParams,
+                            it
+                        )
+
+                    lifecycleScope.launch {
+                        paymentLauncher.confirm(confirmParam)
+                    }
+                } else {
+                    val confirmParam=   ConfirmPaymentIntentParams.createWithPaymentMethodCreateParams(
+                            paymentMethodCreateParams,
+                            it
+                        )
+                    lifecycleScope.launch {
+                        paymentLauncher.confirm(confirmParam)
+                    }
                 }
+
                 /*binding.cardInputWidget.paymentMethodCreateParams?.let { params ->
                     val confirmParams = ConfirmPaymentIntentParams
                         .createWithPaymentMethodCreateParams(params, it)
