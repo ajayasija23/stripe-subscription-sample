@@ -7,6 +7,7 @@ import com.asija.stripe_subscription.card_only.CardOnlyPayment
 import com.asija.stripe_subscription.custom_card.CustomCardActivity
 import com.asija.stripe_subscription.databinding.HomeActivityBinding
 import com.asija.stripe_subscription.prebuilt_ui.PreBuiltActivity
+import com.asija.stripe_subscription.rapydcheckout.RapydCheckout
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding:HomeActivityBinding
@@ -23,6 +24,9 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.tvCustomCard.setOnClickListener {
             startActivity(Intent(this,CustomCardActivity::class.java))
+        }
+        binding.tvRapydCheckout.setOnClickListener {
+            startActivity(Intent(this,RapydCheckout::class.java))
         }
     }
 }

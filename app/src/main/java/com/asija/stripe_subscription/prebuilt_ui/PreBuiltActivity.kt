@@ -3,6 +3,7 @@ package com.asija.stripe_subscription.prebuilt_ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.asija.stripe_subscription.MyApp.Companion.publishableKey
+import com.asija.stripe_subscription.R
 import com.asija.stripe_subscription.databinding.ActivityPrebuiltUiBinding
 import com.asija.stripe_subscription.utils.ClientSecretProvider
 import com.asija.stripe_subscription.utils.toast

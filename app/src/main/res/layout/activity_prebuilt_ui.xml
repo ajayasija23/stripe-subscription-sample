@@ -7,6 +7,15 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <EditText android:id="@+id/etAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:hint="Enter Amount"
+        android:visibility="gone"
+        android:inputType="number"
+        />
+
     <!--  ...  -->
 
 

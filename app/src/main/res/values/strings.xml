@@ -17,4 +17,5 @@
     <string name="card_number">Card Number</string>
     <string name="card_holder">Card Holder Name</string>
     <string name="expire">Expire Data(MM/YY)</string>
+    <string name="rapyd_checkout">Rapyd Checkout</string>
 </resources>

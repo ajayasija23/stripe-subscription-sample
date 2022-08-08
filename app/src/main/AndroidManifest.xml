@@ -37,6 +37,21 @@
         </activity>
         <activity android:name=".custom_card.CustomCardActivity" />
         <activity android:name=".prebuilt_ui.PreBuiltActivity" />
+        <activity android:name=".rapydcheckout.RapydCheckout"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="completed"
+                    android:host="${applicationId}"
+                    />
+                <data android:scheme="failed"
+                    android:host="${applicationId}"
+                    />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"
