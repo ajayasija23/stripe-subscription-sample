@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup android:id="@+id/rgPaymentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/rbClientSide"
+        >
+
+        <RadioButton
+            android:id="@+id/rbClientSide"
+            android:layout_width="@dimen/width_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Client Side"
+            android:textColor="?colorPrimary"
+            />
+        <RadioButton android:id="@+id/rbServerSide"
+            android:layout_width="@dimen/width_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Server Side"
+            android:textColor="?colorPrimary"
+            />
+
+    </RadioGroup>
+
+    <EditText android:id="@+id/orderId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:visibility="gone"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/rgPaymentType"
+        />
+
+    <com.paypal.checkout.paymentbutton.PaymentButtonContainer
+        android:id="@+id/payment_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderId"
+        android:layout_marginTop="16dp"
+        app:paypal_button_color="silver"
+        app:paypal_button_label="paypal"
+        app:paypal_button_shape="rounded"
+        app:paypal_button_size="large"
+        app:paypal_button_enabled="true" />
+
+</RelativeLayout>

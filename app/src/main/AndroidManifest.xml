@@ -52,6 +52,7 @@
                     />
             </intent-filter>
         </activity>
+        <activity android:name=".paypal_client_side.PaypalActivity" />
 
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.asija.stripe_subscription.card_only.CardOnlyPayment
 import com.asija.stripe_subscription.custom_card.CustomCardActivity
 import com.asija.stripe_subscription.databinding.HomeActivityBinding
+import com.asija.stripe_subscription.paypal_client_side.PaypalActivity
 import com.asija.stripe_subscription.prebuilt_ui.PreBuiltActivity
 import com.asija.stripe_subscription.rapydcheckout.RapydCheckout
 
@@ -27,6 +28,9 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.tvRapydCheckout.setOnClickListener {
             startActivity(Intent(this,RapydCheckout::class.java))
+        }
+        binding.tvPaypal.setOnClickListener {
+            startActivity(Intent(this,PaypalActivity::class.java))
         }
     }
 }

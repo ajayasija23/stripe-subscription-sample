@@ -18,4 +18,5 @@
     <string name="card_holder">Card Holder Name</string>
     <string name="expire">Expire Data(MM/YY)</string>
     <string name="rapyd_checkout">Rapyd Checkout</string>
+    <string name="paypal">Paypal</string>
 </resources>
