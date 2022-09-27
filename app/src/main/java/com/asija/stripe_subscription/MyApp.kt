@@ -31,6 +31,6 @@ class MyApp : Application() {
     }
     companion object{
         const val publishableKey="pk_test_51LOOhzSC2k8ef4XuTwbuptTZM3TEm0FtlZrM1sbTYzwFNifnriFRm0g92FV9ZYB8vvGu8w5MDV4SYy2sJguZj2XP00YkDYgngl"
-        const val PAYPAL_CLIENT_ID="AZkipod43uWduJ6pUlW3kHmIUreVxTRO72JJKNIwkreoYOUj1fSnFsiFEhWN6jGtM1FVZRWmX84pZDmR"
+        const val PAYPAL_CLIENT_ID="AaZDfmr8B0m3yglMPBVr6hzval5xcNFOcnA192RyWqRUMmpYQRi98wUMzP7ZyHlLUQ62r2eXATaUMdRt"
     }
 }

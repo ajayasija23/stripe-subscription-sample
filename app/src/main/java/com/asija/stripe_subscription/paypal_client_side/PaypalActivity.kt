@@ -28,13 +28,8 @@ class PaypalActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.apply {
             rgPaymentType.setOnCheckedChangeListener { radioGroup, i ->
-                if (i== R.id.rbClientSide){
-                    binding.orderId.isVisible=false
-                    setupButton()
-                }else{
-                    binding.orderId.isVisible=true
-                    setupButton()
-                }
+                binding.orderId.isVisible = i != R.id.rbClientSide
+                setupButton()
             }
             setupButton()
         }
@@ -64,7 +59,7 @@ class PaypalActivity : AppCompatActivity() {
                 },
                 onApprove = OnApprove { approval ->
                     approval.orderActions.capture { captureOrderResult ->
-                        captureOrderResult.toString().toast(this@PaypalActivity)
+                        captureOrderResult.toString().log()
                     }
                 },
                 onCancel = OnCancel {
